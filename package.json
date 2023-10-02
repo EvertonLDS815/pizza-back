@@ -1,0 +1,23 @@
+{
+  "name": "pizzaria-front",
+  "version": "1.0.0",
+  "description": "Meu servidor backend para um site de pizzaria",
+  "main": "index.js",
+  "repository": "https://github.com/EvertonLDS815/pizza-back.git",
+  "author": "Everton Lino",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only src/server.ts"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.18",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1"
+  }
+}
