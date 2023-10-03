@@ -1,11 +1,9 @@
-import { Router, Request, Response } from 'express';
+import { Router } from 'express';
+import { CreateUserController } from './controllers/user/createUserController';
 
 const router = Router();
 
-router.get('/teste', (req: Request, res: Response) => {
-  res.json({
-    message: 'server is running on port 3333',
-  });
-});
+// rotas user
+router.post('/users', new CreateUserController().handle);
 
 export { router };
