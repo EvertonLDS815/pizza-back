@@ -1,9 +1,10 @@
 import { Router } from 'express';
+import { isAuthenticated } from './middlewares/isAuthenticated';
 import { CreateUserController } from './controllers/user/CreateUserController';
 import { AuthUserController } from './controllers/user/AuthUsercontroller';
 import { DetailUserController } from './controllers/user/DetailUserController';
-import { isAuthenticated } from './middlewares/isAuthenticated';
 import { CreateCategoryController } from './controllers/category/CreateCategoryController';
+import { ListCategoryController } from './controllers/category/ListcategoryController';
 
 const router = Router();
 
@@ -18,5 +19,6 @@ router.post(
   isAuthenticated,
   new CreateCategoryController().handle
 );
+router.get('/category', isAuthenticated, new ListCategoryController().handle);
 
 export { router };
