@@ -8,6 +8,7 @@ import { CreateCategoryController } from './controllers/category/CreateCategoryC
 import { ListCategoryController } from './controllers/category/ListcategoryController';
 import { CreateProductController } from './controllers/product/CreateProductController';
 import { ListByCategoryController } from './controllers/product/ListByCategoryController';
+import { CreateOrderController } from './controllers/order/CreateOrderController';
 
 import uploadConfig from './config/multer';
 
@@ -20,7 +21,7 @@ router.post('/users', new CreateUserController().handle);
 router.post('/session', new AuthUserController().handle);
 router.get('/me', isAuthenticated, new DetailUserController().handle);
 
-// rotas categoriy
+// rotas category
 router.post(
   '/category',
   isAuthenticated,
@@ -40,4 +41,7 @@ router.get(
   isAuthenticated,
   new ListByCategoryController().handle
 );
+
+// rotas order
+router.post('/order', isAuthenticated, new CreateOrderController().handle);
 export { router };
