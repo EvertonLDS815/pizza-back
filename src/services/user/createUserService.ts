@@ -11,7 +11,7 @@ class CreateUserService {
     // verificar se ele deu um email
 
     if (!email) {
-      return { error: 'Email incorrect' };
+      throw new Error('email not exists');
     }
 
     // verificar se o email já está cadastrado
@@ -23,7 +23,7 @@ class CreateUserService {
     });
 
     if (userAlreadyExists) {
-      return { error: 'user already exists' };
+      throw new Error('user already exists');
     }
 
     const passwordHash = await hash(password, 8);

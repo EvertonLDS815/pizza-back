@@ -18,14 +18,14 @@ class AuthUserService {
     });
 
     if (!user) {
-      return { error: 'User/Password incorrect!' };
+      throw new Error('User/Password incorrect');
     }
 
     // Preciso verificar se a senha está correta
     const passwordMatch = await compare(password, user.password);
 
     if (!passwordMatch) {
-      return { error: 'User/Password incorrect!' };
+      throw new Error('User/Password incorrect');
     }
 
     // Se tudo deu certo será gerado o token de usuário
