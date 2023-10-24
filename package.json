@@ -7,7 +7,8 @@
   "author": "Everton Lino",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only src/server.ts"
+    "dev": "ts-node-dev --transpile-only src/server.ts",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.4",
