@@ -7,7 +7,7 @@
   "author": "Everton Lino",
   "license": "MIT",
   "engines": {
-    "node": "20x"
+    "node": "18x"
   },
   "scripts": {
     "start": "node dist/server",
