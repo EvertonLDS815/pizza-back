@@ -27,7 +27,9 @@ npm manifest:
     "author": "Everton Lino",
     "license": "MIT",
     "scripts": {
-      "dev": "ts-node-dev --transpile-only src/server.ts"
+      "start": "node dist/server",
+      "dev": "ts-node-dev --transpile-only src/server.ts",
+      "build": "tsc"
     },
     "devDependencies": {
       "@types/cors": "^2.8.14",

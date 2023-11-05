@@ -1,5 +1,5 @@
 {
-  "name": "pizzaria-front",
+  "name": "pizzaria-back",
   "version": "1.0.0",
   "description": "Meu servidor backend para um site de pizzaria",
   "main": "index.js",
