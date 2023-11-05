@@ -26,6 +26,9 @@ npm manifest:
     "repository": "https://github.com/EvertonLDS815/pizza-back.git",
     "author": "Everton Lino",
     "license": "MIT",
+    "engines": {
+      "node": "20x",
+    },
     "scripts": {
       "start": "node dist/server",
       "dev": "ts-node-dev --transpile-only src/server.ts",
